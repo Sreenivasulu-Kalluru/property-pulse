@@ -17,7 +17,7 @@ const MainLayout = ({ children }) => {
   return (
     <GlobalProvider>
       <AuthProvider>
-        <html lang='en'>
+        <html lang="en">
           <body>
             <Navbar />
             <main>{children}</main>
