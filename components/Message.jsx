@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { toast } from 'react-toastify';
 import { useGlobalContext } from '@/context/GlobalContext';
+import toast from 'react-hot-toast';
 
 const Message = ({ message }) => {
   const [isRead, setIsRead] = useState(message.read);
@@ -53,32 +53,32 @@ const Message = ({ message }) => {
   }
 
   return (
-    <div className='relative bg-white p-4 rounded-md shadow-md border border-gray-200'>
+    <div className="relative p-4 bg-white border border-gray-200 rounded-md shadow-md">
       {!isRead && (
-        <div className='absolute top-2 right-2 bg-yellow-500 text-white px-2 py-1 rounded-md'>
+        <div className="absolute px-2 py-1 text-white bg-yellow-500 rounded-md top-2 right-2">
           New
         </div>
       )}
-      <h2 className='text-xl mb-4'>
-        <span className='font-bold'>Property Inquiry:</span>{' '}
+      <h2 className="mb-4 text-xl">
+        <span className="font-bold">Property Inquiry:</span>{' '}
         {message.property.name}
       </h2>
-      <p className='text-gray-700'>{message.body}</p>
+      <p className="text-gray-700">{message.body}</p>
 
-      <ul className='mt-4'>
+      <ul className="mt-4">
         <li>
           <strong>Name:</strong> {message.sender.username}
         </li>
 
         <li>
           <strong>Reply Email:</strong>{' '}
-          <a href={`mailto:${message.email}`} className='text-blue-500'>
+          <a href={`mailto:${message.email}`} className="text-blue-500">
             {message.email}
           </a>
         </li>
         <li>
           <strong>Reply Phone:</strong>{' '}
-          <a href={`tel:${message.phone}`} className='text-blue-500'>
+          <a href={`tel:${message.phone}`} className="text-blue-500">
             {message.phone}
           </a>
         </li>
@@ -97,7 +97,7 @@ const Message = ({ message }) => {
       </button>
       <button
         onClick={handleDeleteClick}
-        className='mt-4 bg-red-500 text-white py-1 px-3 rounded-md'
+        className="px-3 py-1 mt-4 text-white bg-red-500 rounded-md"
       >
         Delete
       </button>

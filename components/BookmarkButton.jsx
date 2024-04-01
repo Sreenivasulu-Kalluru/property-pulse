@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 import { FaBookmark } from 'react-icons/fa';
 
 const BookmarkButton = ({ property }) => {

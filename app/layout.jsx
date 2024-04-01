@@ -1,10 +1,9 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AuthProvider from '@/components/AuthProvider';
-import { ToastContainer } from 'react-toastify';
 import { GlobalProvider } from '@/context/GlobalContext';
+import { Toaster } from 'react-hot-toast';
 import '@/assets/styles/globals.css';
-import 'react-toastify/dist/ReactToastify.css';
 import 'photoswipe/dist/photoswipe.css';
 
 export const metadata = {
@@ -22,7 +21,7 @@ const MainLayout = ({ children }) => {
             <Navbar />
             <main className="min-h-screen">{children}</main>
             <Footer />
-            <ToastContainer />
+            <Toaster />
           </body>
         </html>
       </AuthProvider>

@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import { FaPaperPlane } from 'react-icons/fa';
-import { toast } from 'react-toastify';
 import { useSession } from 'next-auth/react';
+import toast from 'react-hot-toast';
+import { FaPaperPlane } from 'react-icons/fa';
 
 const PropertyContactForm = ({ property }) => {
   const { data: session } = useSession();
